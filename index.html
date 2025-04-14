@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Mismos metadatos SEO que la versión original -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Joyería Rosario - Piezas exclusivas en oro, plata y diamantes. Joyería artesanal con más de 30 años de tradición. Envíos a toda la República Mexicana.">
+    <meta name="keywords" content="joyería, oro, plata, diamantes, anillos, collares, pulseras, relojes de lujo, joyería fina, regalos especiales">
+    <meta name="author" content="Joyería Rosario">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joyeriarosario.com/">
+    <meta property="og:title" content="Joyería Rosario - Joyería Fina de Alta Gama">
+    <meta property="og:description" content="Descubre nuestras exclusivas piezas de joyería artesanal en oro, plata y diamantes.">
+    <meta property="og:image" content="https://joyeriarosario.com/images/social-share.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://joyeriarosario.com/">
+    <meta property="twitter:title" content="Joyería Rosario - Joyería Fina de Alta Gama">
+    <meta property="twitter:description" content="Descubre nuestras exclusivas piezas de joyería artesanal en oro, plata y diamantes.">
+    <meta property="twitter:image" content="https://joyeriarosario.com/images/social-share.jpg">
+    
+    <title>Joyería Rosario | Joyas Exclusivas en Oro y Plata | 30 Años de Tradición</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="water-bg">
+    <!-- Navbar Minimalista -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-moderna fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span style="font-family: 'Playfair Display'; font-weight: 900; font-size: 1.8rem;" class="silver-text">Rosario</span>
+                <small class="d-block" style="font-size: 0.6rem; letter-spacing: 3px; color: var(--color-text);">JOYERÍA FINA</small>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#coleccion">Colección</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+                <a href="#contacto" class="btn btn-whatsapp-moderno ms-lg-3">
+                    <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Moderna -->
+    <section id="inicio" class="hero-moderno">
+        <div class="hero-overlay"></div>
+        <div class="jewel-reflection" style="top: 40%; left: 60%;"></div>
+        
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="display-3 fw-bold mb-4">
+                        <span class="silver-text">Arte en</span><br>
+                        <span style="color: var(--color-light)">Cada Detalle</span>
+                    </h1>
+                    <p class="lead mb-4" style="color: var(--color-light); opacity: 0.9;">
+                        Piezas únicas donde la tradición se encuentra con el diseño contemporáneo.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#coleccion" class="btn btn-whatsapp-moderno">
+                            <i class="fas fa-gem me-2"></i>Ver Colección
+                        </a>
+                        <a href="#contacto" class="btn btn-outline-light">
+                            <i class="fas fa-phone-alt me-2"></i>Contactar
+                        </a>
+                    </div>
+                    
+                    <!-- Trust badges -->
+                    <div class="d-flex align-items-center mt-5 pt-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                        <div class="me-4">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle me-2" style="color: var(--color-highlight);"></i>
+                                <span>Garantía de autenticidad</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-shipping-fast me-2" style="color: var(--color-highlight);"></i>
+                                <span>Envíos nacionales</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="images/hero-jewel-2.png" alt="Anillo de diamantes Joyería Rosario" class="img-fluid" style="filter: drop-shadow(0 0 30px rgba(122, 179, 214, 0.3));">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Colección Moderna -->
+    <section id="coleccion" class="py-5 position-relative">
+        <div class="wave-divider"></div>
+        <div class="container position-relative">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 mb-3">Colección <span class="silver-text">Exclusiva</span></h2>
+                <p class="lead">Diseños que trascienden el tiempo</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Producto 1 - Anillos -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card-moderno h-100">
+                        <span class="product-badge">Nueva Colección</span>
+                        <img src="images/producto-anillo.jpg" alt="Anillo de diamantes" class="product-img-moderno w-100">
+                        <div class="p-4">
+                            <h3 class="h5">Anillos de Diamantes</h3>
+                            <p class="small text-muted mb-2">Diseños exclusivos con certificado GIA</p>
+                            <div class="silver-text mb-3">Desde $25,000 MXN</div>
+                            <button class="btn btn-sm btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#modalAnillos">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 - Collares -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card-moderno h-100">
+                        <img src="images/producto-collar.jpg" alt="Collar de oro" class="product-img-moderno w-100">
+                        <div class="p-4">
+                            <h3 class="h5">Collares de Oro</h3>
+                            <p class="small text-muted mb-2">18k y 24k con diseños exclusivos</p>
+                            <div class="silver-text mb-3">Desde $18,000 MXN</div>
+                            <button class="btn btn-sm btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#modalCollares">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 3 - Pulseras -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card-moderno h-100">
+                        <span class="product-badge">Más Vendido</span>
+                        <img src="images/producto-pulsera.jpg" alt="Pulsera de plata" class="product-img-moderno w-100">
+                        <div class="p-4">
+                            <h3 class="h5">Pulseras de Plata</h3>
+                            <p class="small text-muted mb-2">925 con piedras semipreciosas</p>
+                            <div class="silver-text mb-3">Desde $12,000 MXN</div>
+                            <button class="btn btn-sm btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#modalPulseras">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 4 - Relojes -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card-moderno h-100">
+                        <img src="images/producto-reloj.jpg" alt="Reloj de lujo" class="product-img-moderno w-100">
+                        <div class="p-4">
+                            <h3 class="h5">Relojes de Lujo</h3>
+                            <p class="small text-muted mb-2">Marcas exclusivas internacionales</p>
+                            <div class="silver-text mb-3">Desde $45,000 MXN</div>
+                            <button class="btn btn-sm btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#modalRelojes">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 pt-3" data-aos="fade-up">
+                <a href="#contacto" class="btn btn-whatsapp-moderno px-5">
+                    <i class="fas fa-crown me-2"></i>Ver Catálogo Completo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros Moderna -->
+    <section id="nosotros" class="py-5" style="background: var(--color-primary);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="position-relative">
+                        <img src="images/nosotros-1.jpg" alt="Taller de joyería" class="img-fluid rounded-3 mb-3 shadow">
+                        <img src="images/nosotros-2.jpg" alt="Maestro joyero" class="img-fluid rounded-3 position-absolute top-50 end-0 shadow" style="width: 60%; transform: translateY(-30%); border: 5px solid var(--color-primary);">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2 class="display-4 mb-4"><span class="silver-text">30 Años</span> de Excelencia</h2>
+                    <p class="lead">En Joyería Rosario, cada pieza cuenta una historia de maestría artesanal.</p>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="me-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-award me-3" style="font-size: 2rem; color: var(--color-highlight);"></i>
+                                <div>
+                                    <h4 class="h5 mb-0">Calidad Certificada</h4>
+                                    <small class="text-muted">Garantía en todos nuestros materiales</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-gem me-3" style="font-size: 2rem; color: var(--color-highlight);"></i>
+                                <div>
+                                    <h4 class="h5 mb-0">Diseños Exclusivos</h4>
+                                    <small class="text-muted">Piezas únicas y personalizadas</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p>Nuestro taller en el corazón de la ciudad alberga décadas de conocimiento y pasión por el arte de la joyería. Combinamos técnicas ancestrales con tecnología de vanguardia para crear piezas que serán tesoros familiares.</p>
+                    
+                    <div class="mt-4 pt-2">
+                        <a href="#contacto" class="btn btn-outline-light me-3">
+                            <i class="fas fa-history me-2"></i>Nuestra Historia
+                        </a>
+                        <a href="#contacto" class="btn btn-whatsapp-moderno">
+                            <i class="fas fa-map-marker-alt me-2"></i>Visítanos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonios Moderna -->
+    <section id="testimonios" class="py-5 position-relative" style="background: linear-gradient(45deg, var(--color-primary), var(--color-dark));">
+        <div class="container position-relative">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 mb-3">Voces de <span class="silver-text">nuestros clientes</span></h2>
+                <div class="wave-divider mx-auto"></div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card-moderno h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/testimonio-1.jpg" alt="Cliente satisfecho" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h5 class="mb-0">María González</h5>
+                                <small class="text-muted">Compradora frecuente</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Compré un anillo de compromiso en Joyería Rosario y superó todas mis expectativas. La calidad es excepcional y el servicio personalizado hizo toda la diferencia."</p>
+                        <div class="mt-3">
+                            <i class="fas fa-star" style="color: var(--color-highlight);"></i>
+                            <i class="fas fa-star" style="color: var(--color-highlight);"></i>
+                            <i class="fas fa-star" style="color: var(--color-highlight);"></i>
+                            <i class="fas fa-star" style="color: var(--color-highlight);"></i>
+                            <i class="fas fa-star" style="color: var(--color-highlight);"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card-moderno h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/testimonio-2.jpg" alt="Cliente satisfecho" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h5 class="mb-0">Carlos Mendoza</h5>
+                                <small class="text-muted">Primera compra</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"La atención al cliente es increíble. Me ayudaron a diseñar un collar personalizado para mi esposa y quedó perfecto. Definitivamente volveré por más piezas."</p>
+                        <div class="mt-3">
+                            <i class="fas fa-star" style="color: var(--color-highlight);"></i>
+                            <i class="fas fa-star" style="color: var(--color-highlight);"></i>
+                            <i class="fas fa-star" style="color: var(--color-highlight);"></i>
+                            <i class="fas fa-star" style="color: var(--color-highlight);"></i>
+                            <i class="fas fa-star" style="color: var(--color-highlight);"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card-moderno h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/testimonio-3.jpg" alt="Cliente satisfecho" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h5 class="mb-0">Ana López</h5>
+                                <small class="text-muted">Coleccionista</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Tengo varias piezas de Joyería Rosario y cada una es una obra de arte. La atención al detalle y la calidad de los materiales es incomparable. Mi joyería favorita."</p>
+                        <div class="mt-3">
+                            <i class="fas fa-star" style="color: var(--color-highlight);"></i>
+                            <i class="fas fa-star" style="color: var(--color-highlight);"></i>
+                            <i class="fas fa-star" style="color: var(--color-highlight);"></i>
+                            <i class="fas fa-star" style="color: var(--color-highlight);"></i>
+                            <i class="fas fa-star-half-alt" style="color: var(--color-highlight);"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto Moderna -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="contact-form-moderno p-4 p-lg-5">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-5 mb-lg-0">
+                                <h2 class="display-4 mb-4">Contáctanos</h2>
+                                <p class="lead mb-4">Estamos aquí para ayudarte a encontrar la pieza perfecta.</p>
+                                
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-map-marker-alt me-3" style="font-size: 1.5rem; color: var(--color-highlight);"></i>
+                                        <div>
+                                            <h4 class="h5 mb-0">Ubicación</h4>
+                                            <p class="mb-0">Av. Joyería 123, Col. Diamante, CDMX</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-phone-alt me-3" style="font-size: 1.5rem; color: var(--color-highlight);"></i>
+                                        <div>
+                                            <h4 class="h5 mb-0">Teléfono</h4>
+                                            <p class="mb-0">+52 1 735 250 4798</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-envelope me-3" style="font-size: 1.5rem; color: var(--color-highlight);"></i>
+                                        <div>
+                                            <h4 class="h5 mb-0">Email</h4>
+                                            <p class="mb-0">contacto@joyeriarosario.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-5">
+                                    <h5 class="mb-3">Síguenos</h5>
+                                    <div>
+                                        <a href="#" class="social-icon me-2"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#" class="social-icon me-2"><i class="fab fa-instagram"></i></a>
+                                        <a href="#" class="social-icon me-2"><i class="fab fa-pinterest-p"></i></a>
+                                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <!-- Mismo formulario de contacto que la versión original -->
+                                <div class="professional-form-container">
+                                    <form id="professionalContactForm" class="needs-validation" novalidate>
+                                        <div class="form-header">
+                                            <h3 class="form-title">Contacto Profesional</h3>
+                                            <p class="form-subtitle">Complete el formulario y nos comunicaremos con usted</p>
+                                        </div>
+                                
+                                        <div class="form-group">
+                                            <label for="professionalName" class="form-label">Nombre Completo*</label>
+                                            <div class="input-group">
+                                                <span class="input-icon">
+                                                    <i class="fas fa-user"></i>
+                                                </span>
+                                                <input type="text" 
+                                                       class="form-control" 
+                                                       id="professionalName" 
+                                                       placeholder="Ej. María González Rodríguez" 
+                                                       required>
+                                                <div class="valid-feedback-icon">
+                                                    <i class="fas fa-check-circle"></i>
+                                                </div>
+                                            </div>
+                                            <div class="invalid-feedback">Por favor ingrese su nombre completo</div>
+                                        </div>
+                                
+                                        <div class="form-group">
+                                            <label for="professionalEmail" class="form-label">Correo Electrónico*</label>
+                                            <div class="input-group">
+                                                <span class="input-icon">
+                                                    <i class="fas fa-envelope"></i>
+                                                </span>
+                                                <input type="email" 
+                                                       class="form-control" 
+                                                       id="professionalEmail" 
+                                                       placeholder="Ej. contacto@dominio.com" 
+                                                       required>
+                                                <div class="valid-feedback-icon">
+                                                    <i class="fas fa-check-circle"></i>
+                                                </div>
+                                            </div>
+                                            <div class="invalid-feedback">Por favor ingrese un correo válido</div>
+                                        </div>
+                                
+                                        <div class="form-group">
+                                            <label for="professionalPhone" class="form-label">Teléfono*</label>
+                                            <div class="input-group">
+                                                <span class="input-icon">
+                                                    <i class="fas fa-phone-alt"></i>
+                                                </span>
+                                                <input type="tel" 
+                                                       class="form-control" 
+                                                       id="professionalPhone" 
+                                                       placeholder="Ej. 5512345678" 
+                                                       required>
+                                                <div class="valid-feedback-icon">
+                                                    <i class="fas fa-check-circle"></i>
+                                                </div>
+                                            </div>
+                                            <div class="invalid-feedback">Por favor ingrese su teléfono</div>
+                                        </div>
+                                
+                                        <div class="form-group">
+                                            <label for="professionalInterest" class="form-label">Tipo de Joya*</label>
+                                            <div class="input-group">
+                                                <span class="input-icon">
+                                                    <i class="fas fa-gem"></i>
+                                                </span>
+                                                <select class="form-control" id="professionalInterest" required>
+                                                    <option value="" selected disabled>Seleccione una opción</option>
+                                                    <option value="Anillos">Anillos</option>
+                                                    <option value="Collares">Collares</option>
+                                                    <option value="Pulseras">Pulseras</option>
+                                                    <option value="Relojes">Relojes</option>
+                                                    <option value="Personalizado">Diseño Personalizado</option>
+                                                </select>
+                                                <div class="valid-feedback-icon">
+                                                    <i class="fas fa-check-circle"></i>
+                                                </div>
+                                            </div>
+                                            <div class="invalid-feedback">Por favor seleccione una opción</div>
+                                        </div>
+                                
+                                        <div class="form-group">
+                                            <label for="professionalMessage" class="form-label">Mensaje*</label>
+                                            <div class="input-group">
+                                                <span class="input-icon align-top">
+                                                    <i class="fas fa-comment-dots"></i>
+                                                </span>
+                                                <textarea class="form-control" 
+                                                          id="professionalMessage" 
+                                                          rows="4" 
+                                                          placeholder="Describa su consulta o interés específico..." 
+                                                          required></textarea>
+                                                <div class="valid-feedback-icon">
+                                                    <i class="fas fa-check-circle"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div class="invalid-feedback">Por favor ingrese un mensaje</div>
+                                                <div class="char-counter"><span id="charCount">0</span>/500</div>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="professionalPrivacy" required>
+                                                <label class="form-check-label" for="professionalPrivacy">
+                                                    Acepto la <a href="#" class="privacy-link">Política de Privacidad</a> y el tratamiento de mis datos
+                                                </label>
+                                                <div class="invalid-feedback">Debe aceptar los términos</div>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="form-group mt-4">
+                                            <button type="submit" class="submit-btn">
+                                                <i class="fas fa-paper-plane me-2"></i> Enviar Mensaje
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                                    <!-- Campos del formulario... -->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Moderno -->
+    <footer class="footer-moderno py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="h4 mb-4" style="font-family: 'Playfair Display'">Joyería Rosario</h3>
+                    <p>Creando piezas excepcionales desde 1993. Joyería artesanal con los más altos estándares de calidad.</p>
+                    <div class="mt-4">
+                        <img src="images/logo-certificado.png" alt="Certificado de autenticidad" class="img-fluid me-2" style="height: 40px;">
+                        <img src="images/logo-joyeros.png" alt="Asociación Mexicana de Joyeros" class="img-fluid" style="height: 40px;">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h4 class="h5 mb-4">Colecciones</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Oro 18k</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Plata 925</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Diamantes</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Relojería</a></li>
+                        <li><a href="#" class="text-decoration-none">Edición Limitada</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h4 class="h5 mb-4">Servicios</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Diseño Personalizado</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Engaste de Piedras</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Pulido y Limpieza</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Certificación GIA</a></li>
+                        <li><a href="#" class="text-decoration-none">Ajuste de Tallas</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h4 class="h5 mb-4">Newsletter</h4>
+                    <p>Suscríbete para recibir nuestras novedades y promociones exclusivas.</p>
+                    <form class="mt-3">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control form-control-moderno" placeholder="Tu correo electrónico">
+                            <button class="btn btn-whatsapp-moderno" type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-5" style="border-color: rgba(255,255,255,0.1);">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">© 2023 Joyería Rosario. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">
+                        <a href="#" class="text-decoration-none me-3">Términos y condiciones</a>
+                        <a href="#" class="text-decoration-none">Política de privacidad</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar-moderna');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Formulario a WhatsApp
+        document.getElementById('contactFormRosario').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const nombre = encodeURIComponent(form.elements[0].value);
+            const email = encodeURIComponent(form.elements[1].value);
+            const telefono = encodeURIComponent(form.elements[2].value);
+            const interes = encodeURIComponent(form.elements[3].value);
+            const mensaje = encodeURIComponent(form.elements[4].value);
+            
+            const whatsappMessage = `Hola Joyería Rosario, estoy interesado en ${interes}.\n\n*Nombre:* ${nombre}\n*Email:* ${email}\n*Teléfono:* ${telefono}\n\n*Mensaje:* ${mensaje}`;
+            
+            window.open(`https://wa.me/5217352504798?text=${whatsappMessage}`, '_blank');
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
+    <!-- Schema Markup para SEO (igual que la versión original) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "JewelryStore",
+      "name": "Joyería Rosario",
+      "description": "Joyería fina artesanal con más de 30 años de experiencia en creación de piezas únicas en oro, plata y diamantes.",
+      "url": "https://joyeriarosario.com",
+      "logo": "https://joyeriarosario.com/images/logo.png",
+      "telephone": "+5217352504798",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Joyería 123",
+        "addressLocality": "Ciudad de México",
+        "addressRegion": "CDMX",
+        "postalCode": "12345",
+        "addressCountry": "MX"
+      },
+      "openingHours": "Mo-Fr 10:00-19:00, Sa 10:00-15:00",
+      "priceRange": "$$$",
+      "sameAs": [
+        "https://facebook.com/joyeriarosario",
+        "https://instagram.com/joyeriarosario",
+        "https://pinterest.com/joyeriarosario"
+      ]
+    }
+    </script>
+</body>
+</html>
