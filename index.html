@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Mismos metadatos SEO que la versión original -->
+    <!-- Metadatos SEO optimizados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Joyería Rosario - Piezas exclusivas en oro, plata y diamantes. Joyería artesanal con más de 30 años de tradición. Envíos a toda la República Mexicana.">
@@ -42,18 +42,497 @@
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="estilos.css">
+    <style>
+        :root {
+            --color-primary: #0a1a2a;
+            --color-secondary: #1a3a5a;
+            --color-dark: #06121e;
+            --color-light: #f8f9fa;
+            --color-highlight: #c9a66b;
+            --color-text: #d1d5db;
+            --color-accent: #3a5a78;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--color-text);
+            background-color: var(--color-dark);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        /* Navbar mejorada */
+        .navbar-moderna {
+            background-color: rgba(10, 26, 42, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(201, 166, 107, 0.1);
+        }
+        
+        .navbar-moderna.scrolled {
+            padding: 10px 0;
+            background-color: rgba(6, 18, 30, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .navbar-brand {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+        
+        .nav-link {
+            color: var(--color-text) !important;
+            font-weight: 500;
+            padding: 8px 15px !important;
+            margin: 0 5px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--color-highlight);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover:before,
+        .nav-link.active:before {
+            width: 100%;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+        }
+        
+        .btn-whatsapp-moderno {
+            background-color: var(--color-highlight);
+            color: var(--color-dark);
+            border: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn-whatsapp-moderno:hover {
+            background-color: #d8b87d;
+            color: var(--color-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(201, 166, 107, 0.3);
+        }
+        
+        /* Hero section mejorada */
+        .hero-moderno {
+            position: relative;
+            padding: 180px 0 120px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-dark));
+            overflow: hidden;
+            color: white;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .silver-text {
+            color: var(--color-text);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .silver-text:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(90deg, var(--color-highlight), transparent);
+        }
+        
+        /* Product cards mejoradas */
+        .product-card-moderno {
+            background: rgba(10, 26, 42, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(201, 166, 107, 0.1);
+            position: relative;
+        }
+        
+        .product-card-moderno:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(201, 166, 107, 0.3);
+        }
+        
+        .product-img-moderno {
+            height: 250px;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .product-card-moderno:hover .product-img-moderno {
+            transform: scale(1.05);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 12px;
+            height: 12px;
+            background-color: var(--color-highlight);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(201, 166, 107, 0.3);
+            z-index: 2;
+        }
+        
+        /* Testimonials mejorados */
+        .testimonial-card-moderno {
+            background: rgba(10, 26, 42, 0.7);
+            border-radius: 10px;
+            padding: 25px;
+            border: 1px solid rgba(201, 166, 107, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card-moderno:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: rgba(201, 166, 107, 0.3);
+        }
+        
+        /* Formulario de contacto mejorado */
+        .contact-form-moderno {
+            background: rgba(10, 26, 42, 0.7);
+            border-radius: 15px;
+            border: 1px solid rgba(201, 166, 107, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        .professional-form-container {
+            background: transparent;
+            border-radius: 10px;
+            padding: 0;
+        }
+        
+        .form-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .form-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--color-highlight);
+            margin-bottom: 5px;
+        }
+        
+        .form-subtitle {
+            color: var(--color-text);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--color-text);
+            font-weight: 500;
+        }
+        
+        .input-group {
+            position: relative;
+        }
+        
+        .input-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--color-highlight);
+            z-index: 3;
+        }
+        
+        .form-control {
+            background-color: rgba(26, 58, 90, 0.3);
+            border: 1px solid rgba(201, 166, 107, 0.2);
+            color: white;
+            padding-left: 45px;
+            height: 50px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            background-color: rgba(26, 58, 90, 0.5);
+            border-color: var(--color-highlight);
+            box-shadow: 0 0 0 0.25rem rgba(201, 166, 107, 0.25);
+            color: white;
+        }
+        
+        textarea.form-control {
+            height: auto;
+            padding-top: 12px;
+        }
+        
+        .valid-feedback-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #28a745;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 3;
+        }
+        
+        .was-validated .form-control:valid ~ .valid-feedback-icon {
+            opacity: 1;
+        }
+        
+        .invalid-feedback {
+            color: #dc3545;
+            font-size: 0.8rem;
+        }
+        
+        .char-counter {
+            font-size: 0.8rem;
+            color: var(--color-text);
+            opacity: 0.7;
+        }
+        
+        .form-check-input {
+            background-color: rgba(26, 58, 90, 0.3);
+            border: 1px solid rgba(201, 166, 107, 0.2);
+        }
+        
+        .form-check-input:checked {
+            background-color: var(--color-highlight);
+            border-color: var(--color-highlight);
+        }
+        
+        .form-check-label {
+            color: var(--color-text);
+            font-size: 0.9rem;
+        }
+        
+        .privacy-link {
+            color: var(--color-highlight);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .privacy-link:hover {
+            text-decoration: underline;
+        }
+        
+        .submit-btn {
+            background-color: var(--color-highlight);
+            color: var(--color-dark);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .submit-btn:hover {
+            background-color: #d8b87d;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(201, 166, 107, 0.3);
+        }
+        
+        /* Footer mejorado */
+        .footer-moderno {
+            background: var(--color-primary);
+            padding: 80px 0 30px;
+            position: relative;
+        }
+        
+        .footer-moderno:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--color-highlight), transparent);
+        }
+        
+        .footer-moderno h3, 
+        .footer-moderno h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .footer-moderno a {
+            color: var(--color-text);
+            transition: all 0.3s ease;
+        }
+        
+        .footer-moderno a:hover {
+            color: var(--color-highlight);
+            text-decoration: none;
+            padding-left: 5px;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(201, 166, 107, 0.1);
+            border-radius: 50%;
+            color: var(--color-text);
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--color-highlight);
+            color: var(--color-dark);
+            transform: translateY(-3px);
+        }
+        
+        /* Efectos especiales */
+        .jewel-reflection {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(201, 166, 107, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        
+        .wave-divider {
+            height: 150px;
+            overflow: hidden;
+            position: absolute;
+            top: -150px;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+        
+        .wave-divider:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 150px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%230a1a2a" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%230a1a2a" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%230a1a2a"/></svg>') no-repeat center bottom;
+            background-size: cover;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 991.98px) {
+            .hero-moderno {
+                padding: 150px 0 80px;
+                text-align: center;
+            }
+            
+            .hero-moderno .d-flex {
+                justify-content: center;
+            }
+            
+            .trust-badges {
+                justify-content: center !important;
+            }
+            
+            .navbar-collapse {
+                background: rgba(6, 18, 30, 0.98);
+                padding: 20px;
+                margin-top: 15px;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+            
+            .nav-item {
+                margin: 5px 0;
+            }
+            
+            .btn-whatsapp-moderno {
+                margin-top: 15px;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .hero-moderno {
+                padding: 120px 0 60px;
+            }
+            
+            .display-3 {
+                font-size: 2.5rem;
+            }
+            
+            .wave-divider {
+                height: 100px;
+                top: -100px;
+            }
+        }
+    </style>
 </head>
 <body class="water-bg">
-    <!-- Navbar Minimalista -->
+    <!-- Navbar Mejorada -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-moderna fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <span style="font-family: 'Playfair Display'; font-weight: 900; font-size: 1.8rem;" class="silver-text">Rosario</span>
                 <small class="d-block" style="font-size: 0.6rem; letter-spacing: 3px; color: var(--color-text);">JOYERÍA FINA</small>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -71,7 +550,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section Moderna -->
+    <!-- Hero Section Mejorada -->
     <section id="inicio" class="hero-moderno">
         <div class="hero-overlay"></div>
         <div class="jewel-reflection" style="top: 40%; left: 60%;"></div>
@@ -96,7 +575,7 @@
                     </div>
                     
                     <!-- Trust badges -->
-                    <div class="d-flex align-items-center mt-5 pt-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                    <div class="d-flex align-items-center mt-5 pt-3 trust-badges" style="border-top: 1px solid rgba(255,255,255,0.1);">
                         <div class="me-4">
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-check-circle me-2" style="color: var(--color-highlight);"></i>
@@ -118,7 +597,7 @@
         </div>
     </section>
 
-    <!-- Sección de Colección Moderna -->
+    <!-- Sección de Colección Mejorada -->
     <section id="coleccion" class="py-5 position-relative">
         <div class="wave-divider"></div>
         <div class="container position-relative">
@@ -199,7 +678,7 @@
         </div>
     </section>
 
-    <!-- Sección Nosotros Moderna -->
+    <!-- Sección Nosotros Mejorada -->
     <section id="nosotros" class="py-5" style="background: var(--color-primary);">
         <div class="container">
             <div class="row align-items-center">
@@ -249,7 +728,7 @@
         </div>
     </section>
 
-    <!-- Sección de Testimonios Moderna -->
+    <!-- Sección de Testimonios Mejorada -->
     <section id="testimonios" class="py-5 position-relative" style="background: linear-gradient(45deg, var(--color-primary), var(--color-dark));">
         <div class="container position-relative">
             <div class="text-center mb-5" data-aos="fade-up">
@@ -261,7 +740,7 @@
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="testimonial-card-moderno h-100">
                         <div class="d-flex align-items-center mb-3">
-                            <img src="images/testimonio-1.jpg" alt="Cliente satisfecho" class="rounded-circle me-3" width="60">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Cliente satisfecho" class="rounded-circle me-3" width="60">
                             <div>
                                 <h5 class="mb-0">María González</h5>
                                 <small class="text-muted">Compradora frecuente</small>
@@ -281,7 +760,7 @@
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="testimonial-card-moderno h-100">
                         <div class="d-flex align-items-center mb-3">
-                            <img src="images/testimonio-2.jpg" alt="Cliente satisfecho" class="rounded-circle me-3" width="60">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Cliente satisfecho" class="rounded-circle me-3" width="60">
                             <div>
                                 <h5 class="mb-0">Carlos Mendoza</h5>
                                 <small class="text-muted">Primera compra</small>
@@ -301,7 +780,7 @@
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="testimonial-card-moderno h-100">
                         <div class="d-flex align-items-center mb-3">
-                            <img src="images/testimonio-3.jpg" alt="Cliente satisfecho" class="rounded-circle me-3" width="60">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente satisfecho" class="rounded-circle me-3" width="60">
                             <div>
                                 <h5 class="mb-0">Ana López</h5>
                                 <small class="text-muted">Coleccionista</small>
@@ -321,7 +800,7 @@
         </div>
     </section>
 
-    <!-- Sección de Contacto Moderna -->
+    <!-- Sección de Contacto Mejorada -->
     <section id="contacto" class="py-5">
         <div class="container">
             <div class="row justify-content-center">
@@ -373,7 +852,6 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <!-- Mismo formulario de contacto que la versión original -->
                                 <div class="professional-form-container">
                                     <form id="professionalContactForm" class="needs-validation" novalidate>
                                         <div class="form-header">
@@ -494,8 +972,6 @@
                                         </div>
                                     </form>
                                 </div>
-                                    <!-- Campos del formulario... -->
-                                </form>
                             </div>
                         </div>
                     </div>
@@ -504,7 +980,7 @@
         </div>
     </section>
 
-    <!-- Footer Moderno -->
+    <!-- Footer Mejorado -->
     <footer class="footer-moderno py-5">
         <div class="container">
             <div class="row">
@@ -512,8 +988,8 @@
                     <h3 class="h4 mb-4" style="font-family: 'Playfair Display'">Joyería Rosario</h3>
                     <p>Creando piezas excepcionales desde 1993. Joyería artesanal con los más altos estándares de calidad.</p>
                     <div class="mt-4">
-                        <img src="images/logo-certificado.png" alt="Certificado de autenticidad" class="img-fluid me-2" style="height: 40px;">
-                        <img src="images/logo-joyeros.png" alt="Asociación Mexicana de Joyeros" class="img-fluid" style="height: 40px;">
+                        <img src="https://via.placeholder.com/100x40?text=Certificado" alt="Certificado de autenticidad" class="img-fluid me-2" style="height: 40px;">
+                        <img src="https://via.placeholder.com/100x40?text=Asociación" alt="Asociación Mexicana de Joyeros" class="img-fluid" style="height: 40px;">
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
@@ -576,42 +1052,77 @@
         });
         
         // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar-moderna');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
+        $(window).scroll(function() {
+            const navbar = $('.navbar-moderna');
+            if ($(this).scrollTop() > 50) {
+                navbar.addClass('scrolled');
             } else {
-                navbar.classList.remove('scrolled');
+                navbar.removeClass('scrolled');
             }
         });
         
-        // Formulario a WhatsApp
-        document.getElementById('contactFormRosario').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const form = e.target;
-            const nombre = encodeURIComponent(form.elements[0].value);
-            const email = encodeURIComponent(form.elements[1].value);
-            const telefono = encodeURIComponent(form.elements[2].value);
-            const interes = encodeURIComponent(form.elements[3].value);
-            const mensaje = encodeURIComponent(form.elements[4].value);
+        // Cerrar navbar al hacer clic en un enlace en móvil
+        $(document).ready(function() {
+            $('.navbar-nav>li>a').on('click', function(){
+                $('.navbar-collapse').collapse('hide');
+            });
             
-            const whatsappMessage = `Hola Joyería Rosario, estoy interesado en ${interes}.\n\n*Nombre:* ${nombre}\n*Email:* ${email}\n*Teléfono:* ${telefono}\n\n*Mensaje:* ${mensaje}`;
+            // Contador de caracteres para el textarea
+            $('#professionalMessage').on('input', function() {
+                const currentLength = $(this).val().length;
+                $('#charCount').text(currentLength);
+                
+                if (currentLength > 500) {
+                    $(this).val($(this).val().substring(0, 500));
+                    $('#charCount').text(500);
+                }
+            });
             
-            window.open(`https://wa.me/5217352504798?text=${whatsappMessage}`, '_blank');
+            // Validación de formulario
+            $('#professionalContactForm').submit(function(e) {
+                e.preventDefault();
+                
+                if (this.checkValidity() === false) {
+                    e.stopPropagation();
+                } else {
+                    // Enviar formulario
+                    const formData = {
+                        name: $('#professionalName').val(),
+                        email: $('#professionalEmail').val(),
+                        phone: $('#professionalPhone').val(),
+                        interest: $('#professionalInterest').val(),
+                        message: $('#professionalMessage').val()
+                    };
+                    
+                    // Aquí podrías agregar AJAX para enviar el formulario
+                    console.log('Formulario enviado:', formData);
+                    
+                    // Mostrar mensaje de éxito
+                    alert('Gracias por su mensaje. Nos pondremos en contacto pronto.');
+                    this.reset();
+                    $('#charCount').text('0');
+                }
+                
+                $(this).addClass('was-validated');
+            });
         });
         
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        // Smooth scrolling con jQuery
+        $('a[href^="#"]').on('click', function(e) {
+            e.preventDefault();
+            
+            const target = this.hash;
+            const $target = $(target);
+            
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 70
+            }, 800, 'swing', function() {
+                window.location.hash = target;
             });
         });
     </script>
     
-    <!-- Schema Markup para SEO (igual que la versión original) -->
+    <!-- Schema Markup para SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
